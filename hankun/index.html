@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩坤-中国当代艺术家与当代艺术策展人官方网站</title>
+    <meta name="description" content="韩坤官方网站，展示中国当代艺术家韩坤的绘画、装置艺术作品。收录其关于城市空间、影像艺术及抽象表现主义的创作理念与策展经历。">
+    <meta name="keywords" content="韩坤, 当代艺术家, 绘画, 装置艺术, 策展人, 韩坤个展">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #c9a962;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+            --font-stack: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 首屏 Hero */
+        .hero {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/artgallery/1920/1080.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--accent-color);
+            color: #fff;
+            border-radius: 2px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #b08d4d;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #fff;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* 简介部分 */
+        .intro {
+            padding: 80px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        .intro-image img {
+            border-radius: 4px;
+            box-shadow: 20px 20px 0 var(--accent-color);
+        }
+
+        /* 作品分类 */
+        .categories {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #fff;
+            transition: padding 0.3s ease;
+        }
+
+        .category-card:hover .category-overlay {
+            padding: 30px;
+        }
+
+        .category-overlay h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        /* 作品展示画廊 */
+        .gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .artwork-card {
+            background: var(--card-bg);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .artwork-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .artwork-thumb {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .artwork-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .artwork-info {
+            padding: 20px;
+        }
+
+        .artwork-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .artwork-year {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* 展览与策展 */
+        .exhibitions {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .exhibitions .section-header h2, .exhibitions .section-header p {
+            color: #fff;
+        }
+
+        .exhibition-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .exhibition-item {
+            display: flex;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 30px;
+        }
+
+        .exhibition-date {
+            min-width: 120px;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            padding-top: 5px;
+        }
+
+        .exhibition-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .exhibition-venue {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        /* 关于/联系 */
+        .about-section {
+            padding: 80px 0;
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .about-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-value {
+            font-weight: 500;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #111;
+            color: #888;
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.5rem; }
+            .intro-grid { grid-template-columns: 1fr; }
+            .intro-image { order: -1; }
+            .about-layout { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { height: 70vh; }
+            .gallery-filters { gap: 10px; }
+            .filter-btn { font-size: 0.9rem; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">韩坤<span>ART</span></div>
+                <div class="nav-links">
+                    <a href="#home" class="active">首页</a>
+                    <a href="#about">艺术家</a>
+                    <a href="#works">作品</a>
+                    <a href="#exhibitions">展览与策展</a>
+                    <a href="#contact">联系</a>
+                </div>
+                <div class="mobile-menu-btn">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>韩坤</h1>
+            <p>探索城市边缘与记忆的边界，以绘画与装置重塑当代视觉语言</p>
+            <div>
+                <a href="#works" class="btn">浏览作品</a>
+                <a href="#about" class="btn btn-outline">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 艺术家简介 -->
+    <section id="about" class="intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-image">
+                    <img src="https://picsum.photos/seed/hankun_portrait/600/800.jpg" alt="韩坤肖像">
+                </div>
+                <div class="intro-text">
+                    <h2>关于艺术家</h2>
+                    <p>韩坤，中国当代艺术领域活跃的绘画艺术家及独立策展人。他的创作植根于对城市化进程的深刻观察，善于捕捉城市空间中孤独、疏离与喧嚣并存的微妙状态。</p>
+                    <p>在艺术风格上，韩坤融合了表现主义的笔触与极简主义的构图，通过色彩与形式的张力，探讨人类记忆与物理空间之间的复杂关系。他的作品曾在国内外多个重要艺术机构展出，并多次参与国际艺术双年展。</p>
+                    <p>除了个人创作，韩坤长期致力于推动青年艺术家的成长，策划了多场具有学术深度的群展，致力于构建开放、多元的当代艺术交流平台。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品分类 -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>创作领域</h2>
+                <p>多维度的艺术探索与表达</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://picsum.photos/seed/cityscape/500/500.jpg" alt="城市景观系列">
+                    <div class="category-overlay">
+                        <h3>城市景观</h3>
+                        <p>对钢筋水泥森林的冷峻记录</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://picsum.photos/seed/abstractpainting/500/500.jpg" alt="抽象表现">
+                    <div class="category-overlay">
+                        <h3>抽象表现</h3>
+                        <p>情绪与色彩的自由流动</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://picsum.photos/seed/installationart/500/500.jpg" alt="装置艺术">
+                    <div class="category-overlay">
+                        <h3>装置艺术</h3>
+                        <p>空间与观众的互动对话</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://picsum.photos/seed/filmart/500/500.jpg" alt="影像艺术">
+                    <div class="category-overlay">
+                        <h3>影像艺术</h3>
+                        <p>时间流逝中的静态瞬间</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品画廊 -->
+    <section id="works" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>精选作品</h2>
+                <p>近期主要创作回顾</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active">全部</button>
+                <button class="filter-btn">油画</button>
+                <button class="filter-btn">水墨</button>
+                <button class="filter-btn">综合材料</button>
+            </div>
+
+            <div class="gallery-grid">
+                <article class="artwork-card">
+                    <div class="artwork-thumb">
+                        <img src="https://picsum.photos/seed/art1/400/300.jpg" alt="Untitled No.5">
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Untitled No.5</h3>
+                        <span class="artwork-year">2023 | 油画布面</span>
+                    </div>
+                </article>
+                <article class="artwork-card">
+                    <div class="artwork-thumb">
+                        <img src="https://picsum.photos/seed/art2/400/300.jpg" alt="Silent City">
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Silent City</h3>
+                        <span class="artwork-year">2022 | 水墨纸本</span>
+                    </div>
+                </article>
+                <article class="artwork-card">
+                    <div class="artwork-thumb">
+                        <img src="https://picsum.photos/seed/art3/400/300.jpg" alt="Fragment of Memory">
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Fragment of Memory</h3>
+                        <span class="artwork-year">2022 | 综合材料</span>
+                    </div>
+                </article>
+                <article class="artwork-card">
+                    <div class="artwork-thumb">
+                        <img src="https://picsum.photos/seed/art4/400/300.jpg" alt="Grey Horizon">
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Grey Horizon</h3>
+                        <span class="artwork-year">2021 | 油画布面</span>
+                    </div>
+                </article>
+                <article class="artwork-card">
+                    <div class="artwork-thumb">
+                        <img src="https://picsum.photos/seed/art5/400/300.jpg" alt="Urban Echo">
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">Urban Echo</h3>
+                        <span class="artwork-year">2021 | 水墨纸本</span>
+                    </div>
+                </article>
+                <article class="artwork-card">
+                    <div class="artwork-thumb">
+                        <img src="https://picsum.photos/seed/art6/400/300.jpg" alt="The Void">
+                    </div>
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">The Void</h3>
+                        <span class="artwork-year">2020 | 装置装置</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 展览与策展 -->
+    <section id="exhibitions" class="exhibitions">
+        <div class="container">
+            <div class="section-header">
+                <h2>展览与策展</h2>
+                <p>近期活动与学术项目</p>
+            </div>
+            <div class="exhibition-list">
+                <div class="exhibition-item">
+                    <div class="exhibition-date">2023.10 - 2023.12</div>
+                    <div class="exhibition-details">
+                        <h3>“流动的边界”个展</h3>
+                        <div class="exhibition-venue">798艺术区 · 韩坤艺术空间</div>
+                        <p>本次展览汇集了韩坤近三年最具代表性的系列作品，通过绘画与装置的结合，探讨当代都市人在快速变迁中的身份认同与空间归属感。</p>
+                    </div>
+                </div>
+                <div class="exhibition-item">
+                    <div class="exhibition-date">2023.06 - 2023.08</div>
+                    <div class="exhibition-details">
+                        <h3>“城市回响”群展策展人</h3>
+                        <div class="exhibition-venue">上海当代艺术博物馆</div>
+                        <p>作为策展人，韩坤策划了此次群展，邀请了来自12个国家的青年艺术家，共同呈现对城市化进程的多元思考。</p>
+                    </div>
+                </div>
+                <div class="exhibition-item">
+                    <div class="exhibition-date">2022.11 - 2022.12</div>
+                    <div class="exhibition-details">
+                        <h3>“静默的喧嚣”个展</h3>
+                        <div class="exhibition-venue">M50创意园</div>
+                        <p>展览聚焦于声音与视觉的通感，利用光影装置营造沉浸式体验空间。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于与联系 -->
+    <section id="contact" class="about-section">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-content">
+                    <h2>联系与合作</h2>
+                    <p>韩坤艺术工作室常年接受画廊代理、美术馆邀约及艺术项目合作。如果您对收藏作品、举办讲座或参与展览洽谈感兴趣，欢迎通过以下方式与我们联系。</p>
+                    <br>
+                    <p>我们致力于为艺术家提供专业的展示平台，同时也期待与各界人士共同推动当代艺术的发展。</p>
+                </div>
+                <aside class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">艺术工作室</span>
+                        <span class="contact-value">北京市朝阳区798艺术区东街88号</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">邮箱</span>
+                        <span class="contact-value">contact@hankun-art.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">电话</span>
+                        <span class="contact-value">+86 10 8888 6666</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">微信</span>
+                        <span class="contact-value">HankunStudio_Official</span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>韩坤ART</h3>
+                    <p>探索当代艺术的无限可能，记录时代的视觉记忆。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#works">作品画廊</a></li>
+                        <li><a href="#exhibitions">展览动态</a></li>
+                        <li><a href="#contact">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">艺术机构</a></li>
+                        <li><a href="#">学术期刊</a></li>
+                        <li><a href="#">艺术社区</a></li>
+                        <li><a href="#">收藏指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">ArtStation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 韩坤艺术工作室 版权所有.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的平滑滚动脚本
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 简单的筛选按钮交互逻辑
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // 移除所有激活状态
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // 激活当前按钮
+                this.classList.add('active');
+                // 这里仅做演示，实际可配合JS过滤画廊内容
+                console.log('筛选类型: ' + this.innerText);
+            });
+        });
+
+        // 移动端菜单切换
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            const currentDisplay = window.getComputedStyle(navLinks).display;
+            if (currentDisplay === 'none') {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = '#fff';
+                navLinks.style.padding = '20px';
+                navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // 窗口大小改变时重置导航栏样式
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 600) {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'row';
+                navLinks.style.position = 'static';
+                navLinks.style.boxShadow = 'none';
+                navLinks.style.padding = '0';
+                navLinks.style.width = 'auto';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+  </html>
