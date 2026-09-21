@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2009四川高考分数线查询，包含四川理科、文科一本、二本、三本及专科录取分数线详细信息，历年数据对比与志愿填报指南。">
+    <meta name="keywords" content="2009四川高考分数线,四川高考分数线,2009四川高考录取分数线,四川高考理科分数线,四川高考文科分数线">
+    <title>2009四川高考分数线-历年数据查询与志愿填报参考</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1e40af; /* 四川教育蓝 */
+            --secondary-color: #3b82f6;
+            --accent-color: #f59e0b; /* 强调色 */
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            padding: var(--spacing-lg) 0;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--card-bg);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: white;
+            color: var(--text-main);
+            transition: all 0.2s;
+        }
+
+        .btn:hover, .btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            width: 200px;
+        }
+
+        /* Data Grid */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .card-header {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .year-tag {
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            background: #e0f2fe;
+            color: var(--primary-color);
+            border-radius: 12px;
+        }
+
+        .card-body {
+            padding: var(--spacing-md);
+        }
+
+        .score-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .score-label {
+            color: var(--text-secondary);
+        }
+
+        .score-value {
+            font-weight: 600;
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+
+        .score-value.high { color: #dc2626; } /* Red for high */
+        .score-value.medium { color: #d97706; } /* Orange for medium */
+        .score-value.low { color: #16a34a; } /* Green for low */
+
+        .card-footer {
+            padding: var(--spacing-md);
+            border-top: 1px solid var(--border-color);
+            background: #f8fafc;
+            text-align: right;
+        }
+
+        .card-link {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Info Section */
+        .info-section {
+            margin-top: var(--spacing-lg);
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: var(--spacing-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .info-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            border-left: 4px solid var(--primary-color);
+            padding-left: var(--spacing-md);
+        }
+
+        .info-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: var(--spacing-md) 0;
+                gap: var(--spacing-md);
+            }
+            
+            nav ul {
+                gap: var(--spacing-md);
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .search-input {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            2009四川高考分数线
+            <span>官方查询与历年数据</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">历年对比</a></li>
+                <li><a href="#">志愿填报</a></li>
+                <li><a href="#">政策解读</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>2009年四川省高考录取分数线</h1>
+        <p>全面收录2009年四川高考理科、文科各批次录取分数线数据，为考生志愿填报提供精准参考。</p>
+    </div>
+</section>
+
+<main class="container">
+    <!-- Filter Section -->
+    <div class="filter-bar">
+        <div class="filter-group">
+            <button class="btn active" onclick="filterData('all')">全部年份</button>
+            <button class="btn" onclick="filterData('2009')">2009年</button>
+            <button class="btn" onclick="filterData('2010')">2010年</button>
+            <button class="btn" onclick="filterData('2011')">2011年</button>
+        </div>
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="搜索分数线..." id="searchInput" onkeyup="searchData()">
+            <button class="btn" onclick="searchData()">搜索</button>
+        </div>
+    </div>
+
+    <!-- Data Cards -->
+    <div class="data-grid">
+        
+        <!-- Card 1: Science -->
+        <article class="card" data-category="science" data-year="2009">
+            <div class="card-header">
+                <span class="card-title">理科分数线</span>
+                <span class="year-tag">2009年</span>
+            </div>
+            <div class="card-body">
+                <div class="score-row">
+                    <span class="score-label">第一批次 (一本)</span>
+                    <span class="score-value high">540</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">第二批次 (二本)</span>
+                    <span class="score-value medium">519</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">第三批次 (三本)</span>
+                    <span class="score-value medium">470</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">专科 (高职)</span>
+                    <span class="score-value low">360</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="card-link">查看详细院校名单 &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Card 2: Arts -->
+        <article class="card" data-category="arts" data-year="2009">
+            <div class="card-header">
+                <span class="card-title">文科分数线</span>
+                <span class="year-tag">2009年</span>
+            </div>
+            <div class="card-body">
+                <div class="score-row">
+                    <span class="score-label">第一批次 (一本)</span>
+                    <span class="score-value high">540</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">第二批次 (二本)</span>
+                    <span class="score-value medium">510</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">第三批次 (三本)</span>
+                    <span class="score-value medium">460</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">专科 (高职)</span>
+                    <span class="score-value low">360</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="card-link">查看详细院校名单 &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Card 3: Sports Science -->
+        <article class="card" data-category="sports" data-year="2009">
+            <div class="card-header">
+                <span class="card-title">体理科分数线</span>
+                <span class="year-tag">2009年</span>
+            </div>
+            <div class="card-body">
+                <div class="score-row">
+                    <span class="score-label">本科线</span>
+                    <span class="score-value medium">440</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">专科线</span>
+                    <span class="score-value low">300</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="card-link">查看详细院校名单 &rarr;</a>
+            </div>
+        </article>
+
+        <!-- Card 4: Arts & Sports -->
+        <article class="card" data-category="arts-sports" data-year="2009">
+            <div class="card-header">
+                <span class="card-title">体文/艺文分数线</span>
+                <span class="year-tag">2009年</span>
+            </div>
+            <div class="card-body">
+                <div class="score-row">
+                    <span class="score-label">本科线</span>
+                    <span class="score-value medium">360</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">专科线</span>
+                    <span class="score-value low">260</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="card-link">查看详细院校名单 &rarr;</a>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <h2>2009年四川高考分数线背景与说明</h2>
+        <div class="info-content">
+            <p>2009年，四川省普通高等学校招生继续实行“3+X”科目设置，其中“X”为综合能力测试。当年的高考录取工作坚持“公平、公正、公开”的原则，各批次录取控制分数线根据四川省考生成绩分布情况及高校招生计划数划定。</p>
+            
+            <div class="highlight-box">
+                <strong>重要提示：</strong>
+                2009年四川高考分数线中，理科和文科的一本分数线均为540分，这与当年试卷难度及招生计划调整密切相关。考生在填报志愿时，建议结合当年的一本线波动情况进行综合评估。
+            </div>
+
+            <h3>分数线查询说明</h3>
+            <p>本页面提供的2009年四川高考分数线数据仅供参考，具体各高校的调档线、专业录取线请以当年四川省教育考试院官方公布为准。以下数据为当年各批次最低录取控制分数线：</p>
+            <ul style="margin-left: 20px; color: var(--text-secondary);">
+                <li><strong>理科：</strong>一本540分，二本519分，三本470分，专科360分。</li>
+                <li><strong>文科：</strong>一本540分，二本510分，三本460分，专科360分。</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2009四川高考分数线查询网 - 数据仅供历史参考，不作为录取唯一依据。</p>
+        <p>声明：本站数据整理自历年公开资料，如有出入请以四川省教育考试院官方发布为准。</p>
+    </div>
+</footer>
+
+<script>
+    // Simple client-side filtering logic
+    function filterData(category) {
+        const cards = document.querySelectorAll('.card');
+        const buttons = document.querySelectorAll('.filter-group .btn');
+
+        // Update active button state
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // Filter cards
+        cards.forEach(card => {
+            if (category === 'all') {
+                card.style.display = 'block';
+            } else {
+                if (card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    function searchData() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toUpperCase();
+        const cards = document.querySelectorAll('.card');
+        let hasResult = false;
+
+        cards.forEach(card => {
+            const text = card.textContent;
+            if (text.toUpperCase().indexOf(filter) > -1) {
+                card.style.display = 'block';
+                hasResult = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
