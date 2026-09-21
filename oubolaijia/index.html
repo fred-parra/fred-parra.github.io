@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="欧泊莱价格查询与购买指南，为您提供欧泊莱品牌彩妆、护肤品的市场价格参考、专柜活动信息及选购建议，帮助您了解欧泊莱最新行情。">
+    <meta name="keywords" content="欧泊莱价格,欧泊莱彩妆,欧泊莱护肤品,欧泊莱专柜,欧泊莱多少钱">
+    <title>欧泊莱价格-欧泊莱品牌彩妆护肤品市场行情与选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b5a2b;
+            --primary-light: #d4a373;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f7f2;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #6d4620;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #e6e2d8 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .search-box {
+            display: inline-flex;
+            background: var(--white);
+            border-radius: 50px;
+            padding: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 0 20px;
+            flex: 1;
+            font-size: 16px;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 10px 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #6d4620;
+        }
+
+        /* Price Table Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        .price-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .product-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .product-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .product-name h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .product-name span {
+            font-size: 12px;
+            color: var(--text-gray);
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .price-tag {
+            text-align: right;
+        }
+
+        .current-price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .original-price {
+            font-size: 14px;
+            text-decoration: line-through;
+            color: var(--text-gray);
+            margin-left: 8px;
+        }
+
+        .price-footer {
+            padding: 15px 20px;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .tags span {
+            margin-right: 8px;
+        }
+
+        .tag {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Buying Guide Section */
+        .guide-section {
+            background-color: var(--white);
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .guide-item {
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .guide-item:hover {
+            border-color: var(--primary-color);
+        }
+
+        .guide-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .guide-item h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .guide-item p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .guide-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .guide-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Store Info Section */
+        .store-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .store-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .store-visual {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .store-visual::before {
+            content: '专柜示意图';
+            color: #999;
+            font-size: 18px;
+        }
+
+        .store-details {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .store-details h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .info-block {
+            margin-bottom: 25px;
+        }
+
+        .info-block h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .info-block p {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 40px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .price-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .price-tag {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>欧泊莱价格</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#products">热门产品</a></li>
+                    <li><a href="#guide">价格指南</a></li>
+                    <li><a href="#store">购买渠道</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-primary">查看活动</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>欧泊莱价格查询与选购指南</h1>
+                <p>为您提供欧泊莱（AUPRES）品牌旗下彩妆、护肤系列的市场实时价格参考。了解最新专柜折扣、套装优惠及不同渠道的性价比分析。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索产品名称，如：元气凝露、双色修容...">
+                    <button>搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Price Section -->
+        <section id="products" class="container">
+            <div class="section-title">
+                <h2>热门产品价格参考</h2>
+                <p>以下价格基于各大电商平台及专柜日常活动整理，实际售价以购买时为准</p>
+            </div>
+
+            <article class="price-card">
+                <div class="price-header">
+                    <div class="product-info">
+                        <div class="product-icon">💧</div>
+                        <div class="product-name">
+                            <h3>欧泊莱元气凝露 (50ml)</h3>
+                            <span>基础护肤</span>
+                        </div>
+                    </div>
+                    <div class="price-tag">
+                        <span class="current-price">¥ 298.00</span>
+                        <span class="original-price">¥ 420.00</span>
+                    </div>
+                </div>
+                <div class="price-footer">
+                    <div class="tags">
+                        <span class="tag">专柜价</span>
+                        <span class="tag">活动折扣</span>
+                    </div>
+                    <div>更新于：2023年10月</div>
+                </div>
+            </article>
+
+            <article class="price-card">
+                <div class="price-header">
+                    <div class="product-info">
+                        <div class="product-icon">💄</div>
+                        <div class="product-name">
+                            <h3>欧泊莱双色修容盘</h3>
+                            <span>彩妆</span>
+                        </div>
+                    </div>
+                    <div class="price-tag">
+                        <span class="current-price">¥ 228.00</span>
+                        <span class="original-price">¥ 280.00</span>
+                    </div>
+                </div>
+                <div class="price-footer">
+                    <div class="tags">
+                        <span class="tag">热门爆款</span>
+                        <span class="tag">套装赠送</span>
+                    </div>
+                    <div>更新于：2023年10月</div>
+                </div>
+            </article>
+
+            <article class="price-card">
+                <div class="price-header">
+                    <div class="product-info">
+                        <div class="product-icon">🧴</div>
+                        <div class="product-name">
+                            <h3>欧泊莱抗皱修护精华露</h3>
+                            <span>抗老护肤</span>
+                        </div>
+                    </div>
+                    <div class="price-tag">
+                        <span class="current-price">¥ 580.00</span>
+                        <span class="original-price">¥ 880.00</span>
+                    </div>
+                </div>
+                <div class="price-footer">
+                    <div class="tags">
+                        <span class="tag">高端线</span>
+                        <span class="tag">赠品丰富</span>
+                    </div>
+                    <div>更新于：2023年10月</div>
+                </div>
+            </article>
+
+            <article class="price-card">
+                <div class="price-header">
+                    <div class="product-info">
+                        <div class="product-icon">🌙</div>
+                        <div class="product-name">
+                            <h3>欧泊莱恒润保湿系列套装</h3>
+                            <span>礼盒套装</span>
+                        </div>
+                    </div>
+                    <div class="price-tag">
+                        <span class="current-price">¥ 899.00</span>
+                        <span class="original-price">¥ 1299.00</span>
+                    </div>
+                </div>
+                <div class="price-footer">
+                    <div class="tags">
+                        <span class="tag">节日限定</span>
+                        <span class="tag">性价比之选</span>
+                    </div>
+                    <div>更新于：2023年10月</div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Buying Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>如何选购欧泊莱产品</h2>
+                    <p>价格并非唯一标准，了解产品特性有助于您做出更明智的选择</p>
+                </div>
+                <div class="guide-grid">
+                    <article class="guide-item">
+                        <div class="guide-icon">🔍</div>
+                        <h3>认准正品渠道</h3>
+                        <p>欧泊莱为美妆品牌，价格差异主要源于渠道。建议通过官方专柜、品牌官网或大型电商平台自营旗舰店购买。</p>
+                        <ul class="guide-list">
+                            <li>警惕价格远低于市场价的“代购”或“微商”。</li>
+                            <li>注意区分“欧莱雅集团”旗下不同品牌。</li>
+                            <li>查看商品防伪码或授权书。</li>
+                        </ul>
+                    </article>
+                    <article class="guide-item">
+                        <div class="guide-icon">🎁</div>
+                        <h3>关注促销节点</h3>
+                        <p>欧泊莱在节假日（如双11、618、女神节）会有较大力度的折扣，此时入手套装性价比最高。</p>
+                        <ul class="guide-list">
+                            <li>双11期间常有满减叠加赠品。</li>
+                            <li>专柜常有会员积分兑换活动。</li>
+                            <li>关注品牌公众号获取限时优惠券。</li>
+                        </ul>
+                    </article>
+                    <article class="guide-item">
+                        <div class="guide-icon">📝</div>
+                        <h3>根据肤质选择</h3>
+                        <p>欧泊莱产品线丰富，不同系列针对不同肌肤问题。了解自己的肤质是判断价格是否物有所值的关键。</p>
+                        <ul class="guide-list">
+                            <li>干皮首选“恒润”或“多效修护”系列。</li>
+                            <li>油皮可尝试“平衡”或“控油”系列。</li>
+                            <li>初老肌可关注“抗皱修护”系列。</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Info Section -->
+        <section id="store" class="store-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>购买渠道与地址</h2>
+                </div>
+                <div class="store-info">
+                    <div class="store-visual">
+                        <!-- Placeholder for visual -->
+                    </div>
+                    <div class="store-details">
+                        <h2>官方直营渠道</h2>
+                        <div class="info-block">
+                            <h4>线上官方旗舰店</h4>
+                            <p>天猫、京东及抖音官方旗舰店提供正品保障，支持七天无理由退换货，价格透明公开。</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>线下专柜</h4>
+                            <p>欧泊莱专柜遍布全国一二线城市商场。专柜价格通常包含服务费，且常有免费试用及皮肤检测服务。</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>客服咨询</h4>
+                            <p>如需查询具体门店地址或最新活动详情，请拨打品牌全国服务热线或在线咨询客服。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container" style="padding-bottom: 60px;">
+            <div class="section-title">
+                <h2>常见问题</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 500; font-size: 16px;">欧泊莱的价格是否比欧莱雅便宜？</summary>
+                    <p style="margin-top: 10px; color: var(--text-gray);">欧泊莱是欧莱雅集团旗下的高端专业护肤品牌，定位高于大众线品牌（如巴黎欧莱雅），因此在定价和材质上通常更具优势，价格区间也相对更高。</p>
+                </details>
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 500; font-size: 16px;">为什么专柜价格和网上价格不一样？</summary>
+                    <p style="margin-top: 10px; color: var(--text-gray)；">专柜价格包含了实体店的运营成本、人工服务及品牌溢价。而电商平台在特定促销期间会有力度更大的折扣，但需注意甄别店铺资质。</p>
+                </details>
+                <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    <summary style="cursor: pointer; font-weight: 500; font-size: 16px;">欧泊莱的价格会随着时间大幅波动吗？</summary>
+                    <p style="margin-top: 10px; color: var(--text-gray);">欧泊莱属于成熟品牌，产品价格体系相对稳定。主要波动出现在换季时推出的新款或大型购物节期间的促销活动。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于欧泊莱价格</h4>
+                    <ul>
+                        <li><a href="#">品牌介绍</a></li>
+                        <li><a href="#">产品系列</a></li>
+                        <li><a href="#">价格查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">正品鉴别</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">物流查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>客服热线：400-XXX-XXXX</li>
+                        <li>工作时间：9:00 - 21:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 欧泊莱价格查询网. 本站仅提供价格参考与信息整理，商品图片及版权归品牌方所有。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
