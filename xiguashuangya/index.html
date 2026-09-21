@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="西瓜霜牙膏官网，专注口腔护理。提供西瓜霜牙膏功效介绍、适用人群、使用方法及选购指南，帮助您缓解牙龈肿痛、口腔溃疡及上火不适，守护全家口腔健康。">
+    <meta name="keywords" content="西瓜霜牙膏,口腔护理,上火牙痛,牙龈肿痛,西瓜霜,口腔溃疡">
+    <title>西瓜霜牙膏-口腔护理专家与上火牙痛缓解指南</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #388E3C;
+            --accent-color: #FF9800;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-light: #F9F9F9;
+            --bg-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-actions .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Benefits Grid */
+        .benefits {
+            background-color: var(--bg-white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--radius-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background-color: #E8F5E9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .benefit-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Problem & Solution Section */
+        .problem-solution {
+            background-color: var(--bg-light);
+        }
+
+        .ps-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ps-list h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .ps-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .ps-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background-color: #FFEBEE;
+            color: #D32F2F;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        .ps-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            color: var(--text-main);
+        }
+
+        .ps-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .ps-image img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Product Showcase */
+        .products {
+            background-color: var(--bg-white);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+        }
+
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-img img {
+            max-height: 100%;
+            width: auto;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            height: 42px;
+            overflow: hidden;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .feature-tag {
+            font-size: 0.75rem;
+            background-color: #F5F5F5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: var(--text-main);
+            color: white;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-block:hover {
+            background-color: black;
+        }
+
+        /* Usage Guide */
+        .usage-guide {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+
+        .usage-guide .section-title {
+            color: white;
+        }
+
+        .usage-guide .section-desc {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background-color: rgba(255,255,255,0.3);
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            border: 4px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+        }
+
+        .step-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #b0b0b0;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 16px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 4px 0 0 4px;
+            border: none;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 10px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .ps-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .ps-image {
+                order: -1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* In a real app, this would be a hamburger menu */
+            }
+            
+            .steps-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .steps-container::before {
+                display: none;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>西瓜霜</span>牙膏
+            </a>
+            <nav class="nav-links">
+                <a href="#benefits">产品功效</a>
+                <a href="#products">热门系列</a>
+                <a href="#usage">使用指南</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#products" class="btn btn-primary">立即选购</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badges">
+                    <span class="badge">国家专利</span>
+                    <span class="badge">草本配方</span>
+                </div>
+                <h1>口腔护理专家<br>缓解上火牙痛</h1>
+                <p>采用独家专利配方，融合中药草本精华。专为解决牙龈肿痛、口腔溃疡及日常口腔不适设计，为全家提供温和而高效的口腔清洁方案。</p>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; md:justify-content: start;">
+                    <a href="#products" class="btn btn-primary" style="padding: 12px 32px; font-size: 1.1rem;">了解产品</a>
+                    <a href="#usage" class="btn" style="padding: 12px 32px; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 20px; font-weight: 600;">查看使用方法</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://picsum.photos/seed/toothpaste_hero/600/400.jpg" alt="西瓜霜牙膏全家桶展示" width="600" height="400">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">核心功效</h2>
+                <p class="section-desc">为什么选择西瓜霜牙膏？多重草本成分协同作用，守护口腔健康。</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon-box">🌿</div>
+                    <h3>中药草本</h3>
+                    <p>精选西瓜霜、薄荷脑等天然草本成分，温和不刺激，适合长期使用。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-box">🛡️</div>
+                    <h3>缓解不适</h3>
+                    <p>针对牙龈肿痛、口腔溃疡等上火症状提供即时舒缓，快速止痛。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-box">🦷</div>
+                    <h3>清新口气</h3>
+                    <p>长效抑菌，去除口腔异味，保持口气清新，增强社交自信。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-box">👨‍👩‍👧‍👦</div>
+                    <h3>全家适用</h3>
+                    <p>无氟配方（部分系列），安全配方，适合孕妇、儿童及成人日常护理。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="section problem-solution">
+        <div class="container ps-wrapper">
+            <div class="ps-list">
+                <h3>您是否面临这些口腔困扰？</h3>
+                <div class="ps-item">
+                    <div class="ps-icon">!</div>
+                    <div class="ps-content">
+                        <h4>经常上火牙痛</h4>
+                        <p>饮食辛辣、熬夜后牙龈红肿疼痛，影响进食。</p>
+                    </div>
+                </div>
+                <div class="ps-item">
+                    <div class="ps-icon">!</div>
+                    <div class="ps-content">
+                        <h4>口腔溃疡反复发作</h4>
+                        <p>嘴角起泡、舌头刺痛，愈合慢，疼痛难忍。</p>
+                    </div>
+                </div>
+                <div class="ps-item">
+                    <div class="ps-icon">!</div>
+                    <div class="ps-content">
+                        <h4>牙龈出血</h4>
+                        <p>刷牙时牙龈出血，伴有口臭，影响口腔卫生。</p>
+                    </div>
+                </div>
+                <div class="ps-item">
+                    <div class="ps-icon">!</div>
+                    <div class="ps-content">
+                        <h4>敏感脆弱</h4>
+                        <p>牙齿遇冷热酸甜敏感，牙龈萎缩，缺乏保护。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ps-image">
+                <img src="https://picsum.photos/seed/toothpaste_problem/600/450.jpg" alt="口腔护理示意图" width="600" height="450">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门系列</h2>
+                <p class="section-desc">针对不同需求，为您提供多样化的选择。</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/toothpaste1/400/300.jpg" alt="西瓜霜草本牙膏" width="400" height="300">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">经典推荐</span>
+                        <h3 class="product-title">西瓜霜草本牙膏</h3>
+                        <p class="product-desc">传统经典配方，有效缓解牙龈肿痛，清新口气，适合全家日常护理。</p>
+                        <div class="product-features">
+                            <span class="feature-tag">草本抑菌</span>
+                            <span class="feature-tag">清新口气</span>
+                            <span class="feature-tag">温和配方</span>
+                        </div>
+                        <a href="#" class="btn-block">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/toothpaste2/400/300.jpg" alt="西瓜霜去黄牙膏" width="400" height="300">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">美白去渍</span>
+                        <h3 class="product-title">西瓜霜去黄牙膏</h3>
+                        <p class="product-desc">在草本护理基础上，添加温和磨砂颗粒，有效去除牙渍，焕亮牙齿。</p>
+                        <div class="product-features">
+                            <span class="feature-tag">美白去黄</span>
+                            <span class="feature-tag">去渍净白</span>
+                            <span class="feature-tag">敏感适用</span>
+                        </div>
+                        <a href="#" class="btn-block">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="https://picsum.photos/seed/toothpaste3/400/300.jpg" alt="西瓜霜抗敏牙膏" width="400" height="300">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">强效护理</span>
+                        <h3 class="product-title">西瓜霜抗敏牙膏</h3>
+                        <p class="product-desc">专为牙齿敏感人群设计，修护牙釉质，减轻冷热酸甜刺激带来的疼痛。</p>
+                        <div class="product-features">
+                            <span class="feature-tag">抗敏感</span>
+                            <span class="feature-tag">修护牙釉质</span>
+                            <span class="feature-tag">深层清洁</span>
+                        </div>
+                        <a href="#" class="btn-block">查看详情</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Guide Section -->
+    <section id="usage" class="section usage-guide">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">正确使用方法</h2>
+                <p class="section-desc">科学刷牙，让功效事半功倍。</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>挤出适量牙膏</h4>
+                        <p>取绿豆大小或一元硬币大小的西瓜霜牙膏于牙刷上。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>细致刷洗</h4>
+                        <p>将牙刷毛对准牙龈沟，采用巴氏刷牙法，轻轻颤动刷毛。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>重点清洁</h4>
+                        <p>针对牙龈肿痛或溃疡部位，可轻轻按摩，促进血液循环。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>漱口清洁</h4>
+                        <p>刷牙2-3分钟后，用清水彻底漱口，去除口腔内残留泡沫。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+                <p class="section-desc">关于西瓜霜牙膏的疑问解答。</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">❓ 西瓜霜牙膏含氟吗？</div>
+                    <div class="faq-answer">大部分经典款西瓜霜牙膏为无氟配方，适合儿童和孕妇使用。部分美白或抗敏系列可能含有微量氟化物，具体请参考产品包装说明。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">❓ 可以治疗牙龈炎吗？</div>
+                    <div class="faq-answer">西瓜霜牙膏具有辅助缓解牙龈肿痛、红肿的作用，属于日常护理和症状缓解产品。如果牙龈炎症严重，建议及时就医并配合医生治疗。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">❓ 口腔溃疡可以用吗？</div>
+                    <div class="faq-answer">可以。西瓜霜牙膏中的草本成分有助于舒缓口腔溃疡带来的疼痛，配合日常清洁能减少细菌滋生，加速恢复。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">❓ 孕妇可以使用吗？</div>
+                    <div class="faq-answer">建议孕妇选择无氟、成分天然的经典草本系列。在使用前，建议咨询专业医生意见。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2><span>西瓜霜</span>牙膏</h2>
+                    <p>致力于为用户提供高品质的口腔护理产品，传承传统中医智慧，结合现代科技，守护您的每一颗牙齿。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="#">经典草本</a></li>
+                        <li><a href="#">美白去渍</a></li>
+                        <li><a href="#">抗敏感系列</a></li>
+                        <li><a href="#">家庭装组合</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">购买指南</a></li>
+                        <li><a href="#">物流查询</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>订阅我们</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">获取最新的口腔护理知识和优惠活动。</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢您的订阅！');">
+                        <input type="email" placeholder="您的邮箱地址" required>
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 西瓜霜牙膏官方展示页. 保留所有权利. 本页面为设计展示用途。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+          </html>
